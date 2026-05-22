@@ -183,11 +183,21 @@ function Display({ cv, onChange, onList, mode, query }) {
       )}
 
       {editing && hidden.size > 0 && (
-        <div style={{padding: "20px 0", display: "flex", gap: 8, flexWrap: "wrap", alignItems: "center", borderTop: "1px solid var(--border)"}}>
-          <span style={{color: "var(--ink-mute)", fontSize: 13, marginRight: 4}}>Hidden sections:</span>
-          {ALL_SECTIONS.filter(s => hidden.has(s.id)).map(s => (
-            <button key={s.id} className="ec-btn" onClick={() => restoreSection(s.id)}>+ Restore "{sectionTitle(s.id, s.title)}"</button>
-          ))}
+        <div style={{padding: "24px 0", borderTop: "1px solid var(--rule)"}}>
+          <div style={{fontFamily: "var(--mono)", fontSize: 11, letterSpacing: ".08em", textTransform: "uppercase", color: "var(--ink-mute)", marginBottom: 12}}>Hidden sections</div>
+          <div style={{display: "flex", flexDirection: "column", gap: 6}}>
+            {ALL_SECTIONS.filter(s => hidden.has(s.id)).map(s => (
+              <div key={s.id} style={{display: "flex", alignItems: "center", justifyContent: "space-between", padding: "8px 14px", border: "1px solid var(--rule)", borderRadius: 6}}>
+                <span style={{fontSize: 14, color: "var(--ink-soft)"}}>{sectionTitle(s.id, s.title)}</span>
+                <button onClick={() => restoreSection(s.id)}
+                  style={{appearance: "none", border: "1px solid var(--rule)", background: "var(--bg)",
+                    color: "var(--ink-soft)", padding: "3px 10px", borderRadius: 4,
+                    fontFamily: "var(--mono)", fontSize: 11, cursor: "pointer", letterSpacing: ".04em"}}>
+                  + Show
+                </button>
+              </div>
+            ))}
+          </div>
         </div>
       )}
 
