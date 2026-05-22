@@ -332,8 +332,11 @@ function Section({ num, title, id, children, meta, onRemove }) {
         <h2>{title}</h2>
         {meta ? <span className="meta">{meta}</span> : <span></span>}
         {onRemove && (
-          <button className="ec-btn danger" onClick={onRemove} title="Hide section"
-            style={{position: "absolute", right: 0, top: "50%", transform: "translateY(-50%)"}}>
+          <button onClick={onRemove} title="Hide section"
+            style={{position: "absolute", right: 0, top: "50%", transform: "translateY(-50%)",
+              appearance: "none", border: "1px solid var(--rule)", background: "var(--bg)",
+              color: "var(--ink-soft)", padding: "3px 10px", borderRadius: 4,
+              fontFamily: "var(--mono)", fontSize: 11, cursor: "pointer", letterSpacing: ".04em"}}>
             × Hide
           </button>
         )}
