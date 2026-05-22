@@ -132,7 +132,7 @@ function Display({ cv, onChange, onList, mode, query }) {
       )}
 
       {!hidden.has("publications") && (
-        <PublicationsSection cv={cv} onList={onList} editing={editing} matches={matches} move={move} onRemove={rm("publications")} title={sectionTitle("publications", "Publications")} onTitleChange={titleChange("publications")} />
+        <PublicationsSection cv={cv} onChange={onChange} onList={onList} editing={editing} matches={matches} move={move} onRemove={rm("publications")} title={sectionTitle("publications", "Publications")} onTitleChange={titleChange("publications")} />
       )}
 
       {!hidden.has("supervision") && (
@@ -359,7 +359,9 @@ function Section({ num, title, id, children, meta, onRemove, onTitleChange }) {
 }
 
 /* ---------- Publications ---------- */
-function PublicationsSection({ cv, onList, editing, matches, move, onRemove, title, onTitleChange }) {
+function PublicationsSection({ cv, onChange, onList, editing, matches, move, onRemove, title, onTitleChange }) {
+  const setStat1 = (key, val) => onChange("pubStats", { ...cv.pubStats, citations:  { ...cv.pubStats.citations,  [key]: val } });
+  const setStat2 = (key, val) => onChange("pubStats", { ...cv.pubStats, citations2: { ...cv.pubStats.citations2, [key]: val } });
   const [typeFilter, setTypeFilter] = useState("all");
   const [yearFilter, setYearFilter] = useState("all");
 
@@ -396,12 +398,32 @@ function PublicationsSection({ cv, onList, editing, matches, move, onRemove, tit
         <div className="pub-stat"><div className="n">{cv.pubStats.conferences}</div><div className="l">Conferences</div></div>
         <div className="pub-stat"><div className="n">{cv.pubStats.workshops}</div><div className="l">Workshops</div></div>
         <div className="pub-stat"><div className="n">{cv.pubStats.chapters}</div><div className="l">Chapters</div></div>
-        <div className="pub-stat"><div className="n">{cv.pubStats.citations.count}</div><div className="l">{cv.pubStats.citations.source}</div></div>
-        <div className="pub-stat"><div className="n">h{cv.pubStats.citations.h}</div><div className="l">h-index · Scholar</div></div>
+        <div className="pub-stat">
+          <div className="n"><Editable value={String(cv.pubStats.citations.count)} onChange={(v) => setStat1("count", parseInt(v) || v)} /></div>
+          <div className="l"><Editable value={cv.pubStats.citations.source} onChange={(v) => setStat1("source", v)} /></div>
+        </div>
+        <div className="pub-stat">
+          <div className="n">h<Editable value={String(cv.pubStats.citations.h)} onChange={(v) => setStat1("h", parseInt(v) || v)} /></div>
+          <div className="l">h-index · Scholar</div>
+        </div>
       </div>
       <div className="cite-row">
-        <span><b>{cv.pubStats.citations.count}</b> citations · h-index <b>{cv.pubStats.citations.h}</b> ({cv.pubStats.citations.source})</span>
-        <span><b>{cv.pubStats.citations2.count}</b> citations · h-index <b>{cv.pubStats.citations2.h}</b> ({cv.pubStats.citations2.source})</span>
+        <span>
+          <b><Editable value={String(cv.pubStats.citations.count)} onChange={(v) => setStat1("count", parseInt(v) || v)} /></b>
+          {" citations · h-index "}
+          <b><Editable value={String(cv.pubStats.citations.h)} onChange={(v) => setStat1("h", parseInt(v) || v)} /></b>
+          {" ("}
+          <Editable value={cv.pubStats.citations.source} onChange={(v) => setStat1("source", v)} />
+          {")"}
+        </span>
+        <span>
+          <b><Editable value={String(cv.pubStats.citations2.count)} onChange={(v) => setStat2("count", parseInt(v) || v)} /></b>
+          {" citations · h-index "}
+          <b><Editable value={String(cv.pubStats.citations2.h)} onChange={(v) => setStat2("h", parseInt(v) || v)} /></b>
+          {" ("}
+          <Editable value={cv.pubStats.citations2.source} onChange={(v) => setStat2("source", v)} />
+          {")"}
+        </span>
       </div>
       <div className="pub-filters">
         {types.map(t => (
