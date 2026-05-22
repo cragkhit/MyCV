@@ -348,10 +348,17 @@ function PublicationsSection({ cv, onList, editing, matches, move }) {
       {groups.map(g => {
         const items = filtered.filter(p => p.type === g.key);
         if (typeFilter !== "all" && typeFilter !== g.key) return null;
-        if (items.length === 0) return null;
+        if (items.length === 0 && !editing) return null;
+        const addBtn = editing && (
+          <AddRowButton
+            onClick={() => onList("publications", "add", { type: g.key, year: new Date().getFullYear(), authors: "Authors", title: "Title", venue: "Venue" })}
+            label={g.label.replace(/s$/, "").toLowerCase()}
+          />
+        );
         return (
           <div className="pub-group" key={g.key}>
             <div className="pub-group-title">{g.label} · {items.length}</div>
+            {addBtn}
             {items.map((p) => {
               const i = cv.publications.indexOf(p);
               return (
@@ -366,11 +373,11 @@ function PublicationsSection({ cv, onList, editing, matches, move }) {
                 </div>
               );
             })}
+            {addBtn}
           </div>
         );
       })}
-      {filtered.length === 0 && <div style={{color: "var(--ink-mute)", fontStyle: "italic", padding: "16px 0"}}>No publications match this filter.</div>}
-      {editing && <AddRowButton onClick={() => onList("publications", "add", { type: typeFilter === "all" ? "journal" : typeFilter, year: new Date().getFullYear(), authors: "Authors", title: "Title", venue: "Venue" })} label="publication" />}
+      {filtered.length === 0 && !editing && <div style={{color: "var(--ink-mute)", fontStyle: "italic", padding: "16px 0"}}>No publications match this filter.</div>}
     </Section>
   );
 }
