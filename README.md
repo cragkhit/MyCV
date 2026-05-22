@@ -54,6 +54,34 @@ Once you enable edit mode in the browser, any in-browser edits are saved to `loc
 3. Enter the password to unlock editing. Changes are saved automatically to `localStorage`.
 4. To reset the password, clear `localStorage` for the site (DevTools → Application → Local Storage → Clear).
 
+## Hosting on GitHub Pages
+
+Because MyCV is a static site with no build step, it deploys to GitHub Pages with a single setting change.
+
+1. **Push the repository to GitHub** (if not already there)
+
+   ```bash
+   git remote add origin https://github.com/<your-username>/MyCV.git
+   git push -u origin main
+   ```
+
+2. **Enable GitHub Pages**
+
+   - Go to your repository on GitHub.
+   - Navigate to **Settings → Pages**.
+   - Under *Source*, select **Deploy from a branch**.
+   - Choose **main** branch and **/ (root)** folder, then click **Save**.
+
+3. **Access your live CV**
+
+   After a minute or two, your CV will be live at:
+   ```
+   https://<your-username>.github.io/MyCV/
+   ```
+   GitHub will show the URL in the Pages settings once the first deployment completes.
+
+> **Note:** In-browser edits are stored in `localStorage`, which is tied to the browser and device. To update the published CV for everyone, edit `cv-data.js` and push a new commit.
+
 ## Snapshot
 
 ![MyCV app screenshot](assets/screenshot.png)
