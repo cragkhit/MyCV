@@ -23,6 +23,8 @@ function Display({ cv, onChange, onList, mode, query }) {
   const removeSection = (id) => onChange("meta.hiddenSections", [...(cv.meta.hiddenSections || []), id]);
   const restoreSection = (id) => onChange("meta.hiddenSections", (cv.meta.hiddenSections || []).filter(s => s !== id));
   const rm = (id) => editing ? () => removeSection(id) : undefined;
+  const sectionTitle = (id, def) => (cv.meta.sectionTitles || {})[id] || def;
+  const titleChange = (id) => editing ? (v) => onChange("meta.sectionTitles", { ...(cv.meta.sectionTitles || {}), [id]: v }) : undefined;
 
   const ALL_SECTIONS = [
     { id: "interests",   title: "Research Interests" },
@@ -43,7 +45,7 @@ function Display({ cv, onChange, onList, mode, query }) {
       <Hero cv={cv} onChange={onChange} editing={editing} />
 
       {!hidden.has("interests") && (
-      <Section num="01" title="Research Interests" id="interests" onRemove={rm("interests")}>
+      <Section num="01" title={sectionTitle("interests", "Research Interests")} id="interests" onRemove={rm("interests")} onTitleChange={titleChange("interests")}>
         <div className="chips">
           {cv.interests.map((it, i) => (
             <span key={i} className="chip has-actions">
@@ -57,7 +59,7 @@ function Display({ cv, onChange, onList, mode, query }) {
       )}
 
       {!hidden.has("experience") && (
-      <Section num="02" title="Professional Experience" id="experience" onRemove={rm("experience")}>
+      <Section num="02" title={sectionTitle("experience", "Professional Experience")} id="experience" onRemove={rm("experience")} onTitleChange={titleChange("experience")}>
         {cv.experience.map((row, i) => (
           <div className="tl-row has-actions" key={i}>
             <div className="tl-when">
@@ -82,7 +84,7 @@ function Display({ cv, onChange, onList, mode, query }) {
       )}
 
       {!hidden.has("education") && (
-      <Section num="03" title="Education" id="education" onRemove={rm("education")}>
+      <Section num="03" title={sectionTitle("education", "Education")} id="education" onRemove={rm("education")} onTitleChange={titleChange("education")}>
         {cv.education.map((row, i) => (
           <div className="edu-item has-actions" key={i}>
             <Editable className="edu-degree" value={row.degree} onChange={(v) => onList("education", "field", { i, k: "degree", v })} />
@@ -102,7 +104,7 @@ function Display({ cv, onChange, onList, mode, query }) {
       )}
 
       {!hidden.has("honors") && (
-      <Section num="04" title="Selected Honors" id="honors" onRemove={rm("honors")}>
+      <Section num="04" title={sectionTitle("honors", "Selected Honors")} id="honors" onRemove={rm("honors")} onTitleChange={titleChange("honors")}>
         <ul className="bullet-list">
           {cv.honors.filter(matches).map((h, i) => (
             <li key={i} className="has-actions">
@@ -116,7 +118,7 @@ function Display({ cv, onChange, onList, mode, query }) {
       )}
 
       {!hidden.has("grants") && (
-      <Section num="05" title="Funded Research Grants" id="grants" onRemove={rm("grants")}>
+      <Section num="05" title={sectionTitle("grants", "Funded Research Grants")} id="grants" onRemove={rm("grants")} onTitleChange={titleChange("grants")}>
         <ul className="bullet-list">
           {cv.grants.filter(matches).map((g, i) => (
             <li key={i} className="has-actions">
@@ -130,15 +132,15 @@ function Display({ cv, onChange, onList, mode, query }) {
       )}
 
       {!hidden.has("publications") && (
-        <PublicationsSection cv={cv} onList={onList} editing={editing} matches={matches} move={move} onRemove={rm("publications")} />
+        <PublicationsSection cv={cv} onList={onList} editing={editing} matches={matches} move={move} onRemove={rm("publications")} title={sectionTitle("publications", "Publications")} onTitleChange={titleChange("publications")} />
       )}
 
       {!hidden.has("supervision") && (
-        <SupervisionSection cv={cv} onList={onList} editing={editing} move={move} onRemove={rm("supervision")} />
+        <SupervisionSection cv={cv} onList={onList} editing={editing} move={move} onRemove={rm("supervision")} title={sectionTitle("supervision", "Student Supervision")} onTitleChange={titleChange("supervision")} />
       )}
 
       {!hidden.has("teaching") && (
-      <Section num="08" title="Teaching at Example University" id="teaching" onRemove={rm("teaching")}>
+      <Section num="08" title={sectionTitle("teaching", "Teaching at Example University")} id="teaching" onRemove={rm("teaching")} onTitleChange={titleChange("teaching")}>
         <table className="tt-table">
           <thead><tr><th>Code</th><th>Course</th><th>Years</th>{editing && <th></th>}</tr></thead>
           <tbody>
@@ -157,11 +159,11 @@ function Display({ cv, onChange, onList, mode, query }) {
       )}
 
       {!hidden.has("services") && (
-        <ServicesSection cv={cv} onList={onList} onChange={onChange} editing={editing} onRemove={rm("services")} />
+        <ServicesSection cv={cv} onList={onList} onChange={onChange} editing={editing} onRemove={rm("services")} title={sectionTitle("services", "Professional Services")} onTitleChange={titleChange("services")} />
       )}
 
       {!hidden.has("talks") && (
-      <Section num="10" title="Selected Invited Talks" id="talks" onRemove={rm("talks")}>
+      <Section num="10" title={sectionTitle("talks", "Selected Invited Talks")} id="talks" onRemove={rm("talks")} onTitleChange={titleChange("talks")}>
         {cv.talks.map((t, i) => (
           <div className="talk-row has-actions" key={i}>
             <Editable className="talk-title" value={t.title} onChange={(v) => onList("talks", "field", { i, k: "title", v })} />
@@ -184,7 +186,7 @@ function Display({ cv, onChange, onList, mode, query }) {
         <div style={{padding: "20px 0", display: "flex", gap: 8, flexWrap: "wrap", alignItems: "center", borderTop: "1px solid var(--border)"}}>
           <span style={{color: "var(--ink-mute)", fontSize: 13, marginRight: 4}}>Hidden sections:</span>
           {ALL_SECTIONS.filter(s => hidden.has(s.id)).map(s => (
-            <button key={s.id} className="ec-btn" onClick={() => restoreSection(s.id)}>+ Restore "{s.title}"</button>
+            <button key={s.id} className="ec-btn" onClick={() => restoreSection(s.id)}>+ Restore "{sectionTitle(s.id, s.title)}"</button>
           ))}
         </div>
       )}
@@ -324,12 +326,12 @@ function onList_inHero(path, i, v, onChange, cv) {
   onChange(path, next);}
 
 /* ---------- Section wrapper ---------- */
-function Section({ num, title, id, children, meta, onRemove }) {
+function Section({ num, title, id, children, meta, onRemove, onTitleChange }) {
   return (
     <section className="section" id={id} data-screen-label={`${num} ${title}`}>
       <header className="section-head">
         <span className="num">§ {num}</span>
-        <h2>{title}</h2>
+        <h2>{onTitleChange ? <Editable value={title} onChange={onTitleChange} /> : title}</h2>
         {meta ? <span className="meta">{meta}</span> : <span></span>}
         {onRemove && (
           <button onClick={onRemove} title="Hide section"
@@ -347,7 +349,7 @@ function Section({ num, title, id, children, meta, onRemove }) {
 }
 
 /* ---------- Publications ---------- */
-function PublicationsSection({ cv, onList, editing, matches, move, onRemove }) {
+function PublicationsSection({ cv, onList, editing, matches, move, onRemove, title, onTitleChange }) {
   const [typeFilter, setTypeFilter] = useState("all");
   const [yearFilter, setYearFilter] = useState("all");
 
@@ -378,7 +380,7 @@ function PublicationsSection({ cv, onList, editing, matches, move, onRemove }) {
   ];
 
   return (
-    <Section num="06" title="Publications" id="publications" meta={`${cv.publications.length} total`} onRemove={onRemove}>
+    <Section num="06" title={title} id="publications" meta={`${cv.publications.length} total`} onRemove={onRemove} onTitleChange={onTitleChange}>
       <div className="pub-stats">
         <div className="pub-stat"><div className="n">{cv.pubStats.journals}</div><div className="l">Journals</div></div>
         <div className="pub-stat"><div className="n">{cv.pubStats.conferences}</div><div className="l">Conferences</div></div>
@@ -439,14 +441,14 @@ function PublicationsSection({ cv, onList, editing, matches, move, onRemove }) {
 }
 
 /* ---------- Supervision ---------- */
-function SupervisionSection({ cv, onList, editing, move, onRemove }) {
+function SupervisionSection({ cv, onList, editing, move, onRemove, title, onTitleChange }) {
   const blocks = [
     { key: "phd", label: "Doctoral Students" },
     { key: "masters", label: "Master's Students" },
     { key: "undergrad", label: "Undergraduate Projects" }
   ];
   return (
-    <Section num="07" title="Student Supervision" id="supervision" onRemove={onRemove}>
+    <Section num="07" title={title} id="supervision" onRemove={onRemove} onTitleChange={onTitleChange}>
       {blocks.map(b => (
         <div className="sup-block" key={b.key}>
           <h4>{b.label}</h4>
@@ -488,7 +490,7 @@ function SupervisionSection({ cv, onList, editing, move, onRemove }) {
 }
 
 /* ---------- Services ---------- */
-function ServicesSection({ cv, onList, onChange, editing, onRemove }) {
+function ServicesSection({ cv, onList, onChange, editing, onRemove, title, onTitleChange }) {
   const s = cv.services;
   const setS = (next) => onChange("services", next);
   const sMove = (key, i, dir) => {
@@ -503,7 +505,7 @@ function ServicesSection({ cv, onList, onChange, editing, onRemove }) {
     onMoveDown: i < s[key].length - 1 ? () => sMove(key, i, 1) : undefined,
   });
   return (
-    <Section num="09" title="Professional Services" id="services" onRemove={onRemove}>
+    <Section num="09" title={title} id="services" onRemove={onRemove} onTitleChange={onTitleChange}>
       <div className="svc-block">
         <h4>Consulting</h4>
         <ul className="bullet-list">
