@@ -147,6 +147,11 @@ window.DEFAULT_CV = {
   ],
   services: {
     consulting: ["Climate Science Advisor (2019–Present): technical advisory to regional government on IPCC AR6 implementation and national adaptation planning"],
+    committees: [
+      "University Research Ethics Committee, Example University (2021–Present)",
+      "Faculty Curriculum Committee, Department of Earth and Environmental Sciences (2020–Present)",
+      "National Climate Research Advisory Panel, Ministry of Science (2022–Present)"
+    ],
     courses: [
       { title: "Global Warming: The Science and the Solutions", host: "Online Learning Platform", url: "https://example.com/courses/global-warming" },
       { title: "Introduction to Climate Change for Non-Scientists", host: "University Open Courseware", url: "https://example.com/open/climate-intro" }
