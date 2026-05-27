@@ -207,15 +207,15 @@ button { font-family: inherit; cursor: pointer; }
 
 /* ---------- experience timeline ---------- */
 .tl-row {
-  display: grid; grid-template-columns: 180px 1fr; gap: 48px;
+  display: grid; grid-template-columns: 180px 1fr; gap: 72px;
   padding: 14px 0; border-bottom: 1px dotted var(--rule);
   align-items: baseline;
 }
 [data-mode="edit"] .tl-row { grid-template-columns: 260px 1fr; gap: 48px; }
 .tl-row:last-child { border-bottom: none; }
 .tl-when {
-  font-family: var(--mono); font-size: 11.5px;
-  color: var(--ink-mute); letter-spacing: .04em;
+  font-family: var(--mono); font-size: 13px;
+  color: var(--accent); letter-spacing: .04em;
   white-space: nowrap;
 }
 [data-mode="edit"] .tl-when {
@@ -242,6 +242,21 @@ button { font-family: inherit; cursor: pointer; }
 .edu-degree { font-family: var(--serif); font-size: 18px; font-style: italic; color: var(--ink); }
 .edu-school { font-size: 14px; font-weight: 500; margin-top: 2px; }
 .edu-meta { font-family: var(--mono); font-size: 11.5px; color: var(--ink-mute); margin-top: 4px; letter-spacing: .04em; }
+
+/* ---------- honors / grants table ---------- */
+.honors-table { width: 100%; }
+.honors-row {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 24px;
+  padding: 10px 0;
+  border-bottom: 1px dotted var(--rule);
+  font-size: 14.5px; line-height: 1.55;
+  color: var(--ink-soft);
+  align-items: start;
+}
+.honors-row:last-child { border-bottom: none; }
+.honors-year { font-family: var(--mono); font-size: 13px; color: var(--accent); padding-top: 1px; }
 
 /* ---------- honors / grants list ---------- */
 .bullet-list { list-style: none; padding: 0; margin: 0; }
@@ -334,12 +349,11 @@ button { font-family: inherit; cursor: pointer; }
 }
 .sup-year:last-child { border-bottom: none; }
 .sup-year .yr {
-  font-family: var(--mono); font-size: 12px; color: var(--ink-mute);
+  font-family: var(--mono); font-size: 13px; color: var(--accent);
   letter-spacing: .04em;
 }
 .sup-year ul { list-style: none; padding: 0; margin: 0; }
 .sup-year li { font-size: 14px; line-height: 1.5; color: var(--ink-soft); padding: 3px 0; }
-.sup-year li::before { content: "— "; color: var(--accent); }
 
 /* ---------- teaching table ---------- */
 .tt-table { width: 100%; border-collapse: collapse; }
@@ -353,6 +367,7 @@ button { font-family: inherit; cursor: pointer; }
   letter-spacing: .12em; text-transform: uppercase;
   color: var(--ink-mute); font-weight: 500;
   border-bottom: 1px solid var(--ink);
+  padding-top: 2px;
 }
 .tt-code { font-family: var(--mono); font-size: 12px; color: var(--accent); white-space: nowrap; }
 .tt-title { color: var(--ink); }
@@ -375,7 +390,7 @@ button { font-family: inherit; cursor: pointer; }
   padding: 8px 0; border-bottom: 1px dotted var(--rule);
 }
 .svc-year-row:last-child { border-bottom: none; }
-.svc-year-row .yr { font-family: var(--mono); font-size: 12px; color: var(--ink-mute); }
+.svc-year-row .yr { font-family: var(--mono); font-size: 13px; color: var(--accent); }
 
 /* ---------- talks ---------- */
 .talk-row { padding: 14px 0; border-bottom: 1px dotted var(--rule); }

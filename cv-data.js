@@ -1,197 +1,273 @@
 // Default CV data. Lives in localStorage once the user edits it.
 window.DEFAULT_CV = {
   meta: {
-    name: "Alex Researcher",
-    title: "Associate Professor — Climate Science",
+    name: "Chaiyong Ragkhitwetsagul",
+    title: "Assistant Professor — Software Engineering",
     tagline: [
-      "Global Warming & Climate Change",
-      "Atmospheric Modeling",
-      "Carbon Cycle & Greenhouse Gases",
-      "Climate Policy & Sustainability"
+      "Software Engineering",
+      "Static Analysis",
+      "Code Similarity & Clone Detection",
+      "Mining Software Repositories"
     ],
-    lastUpdate: "1 January 2025",
+    lastUpdate: "5 February 2026",
     photo: "assets/headshot.jpg"
   },
   contact: {
     address: [
-      "Department of Earth and Environmental Sciences, Example University",
-      "123 University Avenue",
-      "Example City, State 12345, Country"
+      "Faculty of ICT, Mahidol University",
+      "999 Puttamonthon 4 Rd., Salaya",
+      "Puttamonthon, Nakhon Pathom 73170, Thailand"
     ],
-    tel: "+1 555-000-1234",
-    mobile: "+1 555-000-5678",
+    tel: "+66 2 441 0909",
+    mobile: "+66 89 176 3372",
     emails: [
-      "alex.researcher@example.edu",
-      "alex@example.com"
+      "chaiyong.rag@mahidol.ac.th",
+      "chaiyong.rag@mahidol.edu",
+      "cragkhit@gmail.com"
     ],
     links: [
-      { label: "Publications", url: "https://example.com/publications" },
-      { label: "Personal Website", url: "https://example.com" }
+      { label: "Publications", url: "https://cragkhit.github.io/research.html" },
+      { label: "SE Corner Podcast", url: "https://creators.spotify.com/pod/profile/se-corner" }
     ]
   },
   interests: [
-    "Global Warming and Climate Change",
-    "Atmospheric Science and Climate Modeling",
-    "Carbon Cycle and Greenhouse Gas Emissions",
-    "Climate Feedback Mechanisms",
-    "Sea Level Rise and Ice Sheet Dynamics",
-    "Climate Policy and Sustainability"
+    "Software Engineering",
+    "Static Software Analysis",
+    "Code Similarity and Clone Detection",
+    "Mining Software Repositories",
+    "Software Dependency and Vulnerabilities",
+    "Code Proficiency"
   ],
   experience: [
-    { role: "Associate Professor", org: "Department of Earth and Environmental Sciences, Example University", location: "Country", start: "January 2023", end: "Present" },
-    { role: "Assistant Professor", org: "Department of Earth and Environmental Sciences, Example University", location: "Country", start: "January 2018", end: "December 2022" },
-    { role: "Postdoctoral Researcher", org: "Institute for Climate Research, Tech University", location: "Country", start: "September 2016", end: "December 2017" },
-    { role: "Research Scientist", org: "National Center for Atmospheric Research", location: "Country", start: "2012", end: "2014" }
+    { role: "Assistant Professor", org: "Faculty of ICT, Mahidol University", location: "Thailand", start: "May 2022", end: "Present" },
+    { role: "Lecturer", org: "Faculty of ICT, Mahidol University", location: "Thailand", start: "December 2012", end: "April 2022" },
+    { role: "Assistant Dean of the Academic Administration", org: "Faculty of ICT, Mahidol University", location: "Thailand", start: "October 2018", end: "October 2020" },
+    { role: "Adjunct Lecturer", org: "CMKL University", location: "Thailand", start: "January 2026", end: "Present" },
+    { role: "Podcaster — SE Corner", org: "SE Corner", location: "Thailand", start: "August 2021", end: "Present" },
+    { role: "System Analyst", org: "Office of the National Economic and Social Development Council", location: "Thailand", start: "2009", end: "2012" },
+    { role: "Software Test Engineer", org: "Microsoft (Thailand)", location: "Thailand", start: "2006", end: "2007" }
   ],
   education: [
-    { degree: "Doctor of Philosophy (Earth Sciences — Atmospheric and Climate Science)", school: "Tech University", department: "Department of Earth and Planetary Sciences, Faculty of Science", location: "City, Country", year: "September 2016" },
-    { degree: "Master of Science in Environmental Science", school: "State University", department: "School of Earth and Environment", location: "City, Country", year: "May 2012" },
-    { degree: "Bachelor of Science in Physics (Summa Cum Laude)", school: "Example University", department: "Department of Physics, Faculty of Science", location: "City, Country", year: "May 2010" }
+    { degree: "Doctor of Philosophy (Computer Science — Software Engineering)", school: "University College London", department: "Department of Computer Science, Faculty of Engineering Sciences", location: "London, UK", year: "October 2018" },
+    { degree: "Master of Science in IT — Very Large Information Systems", school: "Carnegie Mellon University", department: "School of Computer Science", location: "Pittsburgh, USA", year: "December 2008" },
+    { degree: "Bachelor of Computer Engineering (Magna cum Laude)", school: "Kasetsart University", department: "Department of Computer Engineering, Faculty of Engineering", location: "Bangkok, Thailand", year: "March 2006" }
   ],
   honors: [
-    "Outstanding Reviewer Award, Journal of Climate, American Meteorological Society, 2022",
-    "Best Paper Award, International Conference on Climate Change and Global Warming (ICCCGW '21), Virtual Event, 2021",
-    "Early Career Scientist Award, International Union of Geodesy and Geophysics (IUGG), 2020",
-    "Best Poster Award, American Geophysical Union (AGU) Fall Meeting, San Francisco, 2019",
-    "Outstanding PhD Thesis Award, National Research Foundation, 2017",
-    "Full PhD Scholarship, Example University, 2014",
-    "Full Master's Scholarship, Government Scholarship Program, 2010",
-    "Winner of the Regional Science Olympiad — Earth Sciences Category, 2009"
+    { year: "2023", honor: "Distinguished Reviewer Awards, the 31st IEEE/ACM International Conference on Program Comprehension (ICPC '23)" },
+    { year: "2022", honor: "Best Reviewer Awards, Journal of Systems and Software" },
+    { year: "2022", honor: "Best Paper Award, 29th Asia-Pacific Software Engineering Conference (APSEC '22) Software Engineering Education Track, Virtual Event" },
+    { year: "2022", honor: "Best Paper Award and the People's Choice Award (best presentation), 16th International Workshop on Software Clones, Limassol, Cyprus" },
+    { year: "2022", honor: "Recipient of the Scholarships for Ph.D. Students from Mahidol University, 24 March 2022" },
+    { year: "2021", honor: "Recipient of the Research Grant for New Scholars (RGNS) for 2 years from MHESRI on \"Code similarity applications for improving software quality\", 9 November 2021" },
+    { year: "2021", honor: "Honorable mention for Learning Innovation for Online Courses Awards (Online Engagement and Motivation Techniques) for Using Virtual Reality for Project Presentation (ITCS431), 3 July 2021" },
+    { year: "2020", honor: "PhD Thesis Awards, National Research Awards, National Research Council of Thailand, 16 November 2020" },
+    { year: "2020", honor: "The Best Tool Demo Award, 36th IEEE International Conference on Software Maintenance and Evolution (ICSME) — Tool Demo, Adelaide (Virtual)" },
+    { year: "2018", honor: "The People's Choice Award (best presentation), 12th International Workshop on Software Clones, Campobasso, Italy" },
+    { year: "2017", honor: "The People's Choice Award (best presentation), 11th International Workshop on Software Clones, Klagenfurt, Austria" },
+    { year: "2014", honor: "Full PhD scholarship, Mahidol University" },
+    { year: "2007", honor: "Full master's degree scholarship, The Royal Thai Government" },
+    { year: "2006", honor: "Winner of the 8th National Software Contest of Thailand (NSC) — Software for Entertainment" }
   ],
   grants: [
-    "Example University Strategic Research Fund (Rising Category) 2024 — \"AI-Enhanced Climate Projection Models for Regional Warming Scenarios\", $150,000 × 2 years",
-    "Example University Scholarship for PhD Student 2024",
-    "National Research Foundation Grant — \"Quantifying Feedback Mechanisms in Arctic Amplification\", 2022–2024, $80,000 × 2 years",
-    "University Research Cluster — \"Integrated Assessment of Climate Impacts on Coastal Ecosystems\", 2021–2022 (led by Dr. B. Collaborator)",
-    "International Research Exchange Grant, Royal Academy of Sciences, 2019–2021, £15,000 × 2 years",
-    "High-Performance Computing Research Credits, National Supercomputing Centre, 2018, $20,000 USD",
-    "Student Travel Support Grant, National Science Foundation, 2016, $700 USD"
+    { year: "2025", grant: "Mahidol's Strategic Research Fund (Rising Category) — \"M-MMT4NL: Multilingual Testing Framework for Large-Language Models\", 1.5M THB × 1.5 years" },
+    { year: "2025", grant: "Mahidol's Scholarship for Ph.D. Student" },
+    { year: "2023", grant: "MAINTAIN — Intelligent Maintenance of Software Systems, CNPq/MCTI No 10/2023 — Universal 2023, Researcher (led by Dr. Matheus Paixao, UECE, Brazil)" },
+    { year: "2022", grant: "Mahidol's Scholarship for Ph.D. Student" },
+    { year: "2021–2023", grant: "Research Grant for New Scholars (RGNS) from MHESRI — \"Code similarity applications for improving software quality\", 600K THB × 2 years" },
+    { year: "2021–2022", grant: "Mahidol University Mini-Research Cluster (MU-MiniRC) — \"Applying Software Engineering for Improving the Development of Data Science Application\" (led by Dr. Apirak Hoonlor)" },
+    { year: "2019–2021", grant: "Automated Software Engineering for Thailand Software Industry, Royal Academy of Engineering (UK) and TSRI, 13,345 GBP × 2 years" },
+    { year: "2019–2020", grant: "UIC grant, University of Wollongong" },
+    { year: "2018", grant: "Amazon AWS Credits for Research, 20,000 USD" },
+    { year: "2016", grant: "NSF Student Travel Support for the 8th Symposium on Search-Based Software Engineering, 700 USD" },
+    { year: "2016", grant: "Microsoft Azure Research Award, 20,000 USD" }
   ],
   pubStats: {
-    monographs: 0, journals: 8, conferences: 20, chapters: 2, workshops: 5, edited: 0,
-    citations: { source: "Google Scholar (1 Jan 2025)", count: 800, h: 14 },
-    citations2: { source: "Scopus (1 Jan 2025)", count: 500, h: 12 }
+    monographs: 0, journals: 11, conferences: 38, chapters: 2, workshops: 7, edited: 0,
+    citations: { source: "Google Scholar (6 Jan 2026)", count: 1204, h: 17 },
+    citations2: { source: "Scopus (6 Jan 2026)", count: 649, h: 15 }
   },
   publications: [
-    { type: "chapter", year: 2024, authors: "A. Researcher, B. Collaborator, C. Scholar", title: "Global Warming Trajectories Under Shared Socioeconomic Pathways: Uncertainties and Opportunities", venue: "Handbook of Climate Science Research (Smith & Jones eds.), pp. 112–145, Springer" },
-    { type: "chapter", year: 2021, authors: "B. Collaborator, A. Researcher", title: "Feedback Mechanisms in the Climate System: From Theory to Observation", venue: "Advances in Atmospheric Science (Brown ed.), pp. 67–98, MIT Press" },
+    { type: "chapter", year: 2026, authors: "T. Racharak, C. Ragkhitwetsagul, P. Saeheng, N. Boongaree, C. Sriwilailak, E. Chuangsuwanich", title: "AI Literacy in Code: Identifying and Explaining ChatGPT-Generated Programs in Educational Settings", venue: "Standards-Based AI Innovation for the Learning Ecosystem (pp. 213–262), IGI Global Scientific Publishing" },
+    { type: "chapter", year: 2021, authors: "Krinke, J., & Ragkhitwetsagul, C.", title: "Code Similarity in Clone Detection", venue: "Code Clone Analysis (Inoue & Roy eds.), pp. 135–160, Springer" },
 
-    { type: "journal", year: 2024, authors: "A. Researcher, B. Collaborator, C. Scholar, D. Academic", title: "Regional Temperature Extremes Under 1.5°C and 2°C Global Warming: A Multi-Model Analysis", venue: "Nature Climate Change" },
-    { type: "journal", year: 2024, authors: "C. Scholar, E. Postdoc, A. Researcher", title: "Permafrost Thaw Carbon Release: Observations and Model Projections for the 21st Century", venue: "Global Change Biology" },
-    { type: "journal", year: 2023, authors: "B. Collaborator, F. Student, A. Researcher, G. Partner, H. Advisor", title: "Accelerated Melting of the Greenland Ice Sheet: Attribution and Future Projections", venue: "Journal of Geophysical Research: Atmospheres, vol. 128, no. 4, pp. 100–125" },
-    { type: "journal", year: 2022, authors: "A. Researcher, B. Collaborator", title: "ClimSim: A Scalable Framework for High-Resolution Regional Climate Downscaling", venue: "Geoscientific Model Development" },
-    { type: "journal", year: 2022, authors: "A. Researcher, B. Collaborator, E. Postdoc, G. Partner, H. Advisor", title: "Urban Heat Island Amplification Under Climate Change: A Global Assessment", venue: "Environmental Research Letters" },
-    { type: "journal", year: 2021, authors: "C. Scholar, I. Researcher, A. Researcher", title: "Decadal Variability of the Atlantic Meridional Overturning Circulation and Its Impact on European Climate", venue: "Journal of Climate" },
-    { type: "journal", year: 2020, authors: "E. Postdoc, B. Collaborator, A. Researcher, G. Partner, H. Advisor", title: "Tropical Forest Dieback Under Sustained Drought: Carbon Flux Implications", venue: "Nature Geoscience" },
-    { type: "journal", year: 2019, authors: "A. Researcher, B. Collaborator, D. Academic", title: "A Comparison of Global Climate Model Downscaling Approaches for Impact Assessment", venue: "Climate Dynamics" },
+    { type: "journal", year: 2026, authors: "C. Ragkhitwetsagul, J. Krinke, M. Choetkiertikul, T. Sunetnanta, F. Sarro", title: "Automated Software Engineering Knowledge Transfer: A Case Study on Small and Medium-sized Software Enterprises in Thailand", venue: "Journal of Systems and Software (JSS)" },
+    { type: "journal", year: 2025, authors: "M. Choetkiertikul, S. Kancharoendee, C. Jongyingyos, T. Phichitphanphong, C. Ragkhitwetsagul, B. Reid, R.G. Kula, T. Sunetnanta", title: "Security by Documentation? Characterizing GitHub SECURITY.md policy and their Adoption in Python Libraries", venue: "Empirical Software Engineering" },
+    { type: "journal", year: 2025, authors: "I. Wiratsin, C. Ragkhitwetsagul", title: "Effectiveness of Explainable Artificial Intelligence (XAI) Techniques for Improving Human Trust in Machine Learning Models: A Systematic Literature Review", venue: "IEEE Access" },
+    { type: "journal", year: 2025, authors: "M. Choetkiertikul, P. Banyongrakkul, C. Ragkhitwetsagul, S. Tuarob, H. K. Dam, T. Sunetnanta", title: "Sprint2Vec: A Deep Characterization of Sprints in Iterative Software Development", venue: "IEEE Transactions on Software Engineering, vol. 51, no. 1, pp. 220–242" },
+    { type: "journal", year: 2024, authors: "C. Ragkhitwetsagul, J. Krinke, M. Choetkiertikul, T. Sunetnanta, F. Sarro", title: "Adoption of Automated Software Engineering Tools and Techniques in Thailand", venue: "Empirical Software Engineering" },
+    { type: "journal", year: 2023, authors: "M. Choetkiertikul, A. Puengmongkolchaikit, P. Chandra, C. Ragkhitwetsagul, R. Maipradit, H. Hata, T. Sunetnanta, K. Matsumoto", title: "Studying the association between Gitcoin's issues and resolving outcomes", venue: "Journal of Systems and Software" },
+    { type: "journal", year: 2023, authors: "P. Sangaroonsilp, H. K. Dam, M. Choetkiertikul, C. Ragkhitwetsagul, A. Ghose", title: "A taxonomy for mining and classifying privacy requirements in issue reports", venue: "Information and Software Technology" },
+    { type: "journal", year: 2021, authors: "M. Choetkiertikul, H. K. Dam, T. Tran, T. Pham, C. Ragkhitwetsagul, A. Ghose", title: "Automatically recommending components for issue reports using deep learning", venue: "Empirical Software Engineering 26:14" },
+    { type: "journal", year: 2019, authors: "M. Paixao, J. Krinke, D. Han, C. Ragkhitwetsagul, M. Harman", title: "The Impact of Code Review on Architectural Changes", venue: "IEEE Transactions on Software Engineering" },
+    { type: "journal", year: 2019, authors: "C. Ragkhitwetsagul, J. Krinke", title: "Siamese: Scalable and Incremental Code Clone Search via Multiple Code Representations", venue: "Empirical Software Engineering" },
+    { type: "journal", year: 2019, authors: "C. Ragkhitwetsagul, J. Krinke, M. Paixao, G. Bianco, R. Oliveto", title: "Toxic Code Snippets on Stack Overflow", venue: "IEEE Transactions on Software Engineering" },
+    { type: "journal", year: 2017, authors: "C. Ragkhitwetsagul, J. Krinke, D. Clark", title: "A Comparison of Code Similarity Analysers", venue: "Empirical Software Engineering" },
 
-    { type: "conference", year: 2024, authors: "A. Researcher, J. GradStudent, K. Undergrad, C. Scholar, G. Partner", title: "ClimateViz: An Interactive Framework for Communicating Climate Projections to Policymakers", venue: "AGU Fall Meeting '24 — Tool Demo Track, Example City, Country" },
-    { type: "conference", year: 2024, authors: "L. Undergrad, A. Researcher, C. Scholar, M. Advisor", title: "Machine Learning for Sub-Seasonal Temperature Forecasting in Climate-Sensitive Regions", venue: "EGU General Assembly 2024, Example City, Country" },
-    { type: "conference", year: 2023, authors: "C. Scholar, N. Researcher, A. Researcher, O. Student, P. Partner, M. Advisor", title: "Characterizing Compound Extreme Events Under Global Warming Scenarios", venue: "AMS Annual Meeting '23 — Registered Report, Example City, Country" },
-    { type: "conference", year: 2023, authors: "Q. Student, R. Student, S. Student, A. Researcher, P. Partner, C. Scholar, M. Advisor", title: "IceWatch: A Remote Sensing Tool for Real-Time Polar Ice Extent Monitoring", venue: "IGARSS '23, Example City, Country" },
-    { type: "conference", year: 2022, authors: "A. Researcher, C. Scholar, N. Researcher, T. Collaborator", title: "Using Immersive Visualization for Climate Science Outreach in Schools", venue: "EGU General Assembly 2022, Virtual Event (best paper award)" },
-    { type: "conference", year: 2022, authors: "A. Researcher, E. Postdoc", title: "Benchmarking Ocean Heat Content Estimates Across Reanalysis Products", venue: "Ocean Sciences Meeting '22 — Registered Report, Virtual Event" },
-    { type: "conference", year: 2021, authors: "U. Student, V. Student, A. Researcher, W. Partner", title: "CarbonTrack: A Dashboard for Monitoring National Greenhouse Gas Inventories", venue: "AGU Fall Meeting 2021 — Tool Demonstrations, Virtual Event" },
-    { type: "conference", year: 2020, authors: "X. Student, A. Researcher, B. Collaborator, E. Postdoc, Y. Partner", title: "Does Afforestation Really Offset Carbon Emissions? A Meta-Analysis", venue: "Global Carbon Project Conference 2020, Virtual Event" },
-    { type: "conference", year: 2019, authors: "Z. Student, B. Collaborator, A. Researcher", title: "Are Policymakers Aware of the Tipping Points in the Earth System?", venue: "Climate Change Conference 2019, Example City, Country" },
-    { type: "conference", year: 2018, authors: "A. Researcher, B. Collaborator, D. Academic", title: "Cloud Radiative Feedbacks in the Presence of Elevated CO₂ Concentrations", venue: "CFMIP Meeting 2018, Example City, Country" },
-    { type: "conference", year: 2017, authors: "A. Researcher, B. Collaborator, D. Academic", title: "Quantifying Aerosol–Cloud Interactions in Coupled Climate Models", venue: "AMS Annual Meeting 2017 — Doctoral Symposium, Example City, Country" },
+    { type: "conference", year: 2026, authors: "Y. Takei, T. Aoki, C. Ragkhitwetsagul", title: "Quantifying Competitive Relationships Among Open-Source Software Projects", venue: "MSR '26 — Research Track, Rio de Janeiro, Brazil (FOSS Award Runner-up)" },
+    { type: "conference", year: 2026, authors: "I. Uchoa, D. Sousa, M. Paixao, C. Ragkhitwetsagul, T. L. Matos", title: "A Study on Code Clone Lifecycles in Pull Requests Created by AI Agents", venue: "MSR '26 — Mining Challenge Track" },
+    { type: "conference", year: 2026, authors: "D. Sousa, I. Uchoa, M. Paixao, C. Ragkhitwetsagul, T. L. Matos", title: "An Empirical Study of Code Clone Genealogies in Human-AI Collaborative Development", venue: "MSR '26 — Mining Challenge Track" },
+    { type: "conference", year: 2026, authors: "N. Temkulkiat, C. Ragkhitwetsagul, M. Choetkiertikul, R. Rojpaisarnkit, R. G. Kula", title: "When is Generated Code Difficult to Comprehend? Assessing AI Agent Python Code Proficiency in the Wild", venue: "MSR '26 — Mining Challenge Track" },
+    { type: "conference", year: 2026, authors: "P. Saeheng, N. Boongaree, C. Sriwilailak, C. Ragkhitwetsagul, T. Racharak, E. Chuangsuwanich", title: "NPC: Automated Tool for Detecting and Explaining ChatGPT-Generated Programs", venue: "ICAART '26, Marbella, Spain" },
+    { type: "conference", year: 2025, authors: "C. Sontesadisai, C. Sae-Ngow, J. Rudeerudchanawong, L. Dangsungnoen, C. Ragkhitwetsagul, T. Racharak, T. Sunetnanta", title: "PromptOps: Automated Tool for Testing Trustworthiness of LLMs", venue: "APSEC '25 — Tool Demonstration Track, Macao SAR" },
+    { type: "conference", year: 2025, authors: "P. Trakoolgerntong, T. Xiao, M. Kondo, C. Ragkhitwetsagul, M. Choetkiertikul, P. Sangaroonsilp, Y. Kamei", title: "AILINKPREVIEWER: Enhancing Code Reviews with LLM-Powered Link Previews", venue: "APSEC '25 — Tool Demonstration Track, Macao SAR" },
+    { type: "conference", year: 2025, authors: "N. Khumto, P. Tomyim, P. Thonguran, M. Choetkiertikul, C. Ragkhitwetsagul, P. Sangaroonsilp, S. Palakvangsa-Na-Ayudhya, T. Sunetnanta", title: "TraceCraft: A Tool for ISO/IEC 29110 Traceability Management", venue: "InCIT '25, Phuket, Thailand" },
+    { type: "conference", year: 2025, authors: "C. Ragkhitwetsagul, M. Choetkiertikul, S. Palakvangsa-Na-Ayudhya, T. Sunetnanta, N. Satchanawakul", title: "The Impact of COVID-19 and Remote Work on Software Development in Thailand", venue: "InCIT '25, Phuket, Thailand" },
+    { type: "conference", year: 2025, authors: "T. Racharak, C. Ragkhitwetsagul, C. Junplong, A. Supratak", title: "Natural Language Explanation in Code Clone Detection using LLM-based Post Hoc Explainer", venue: "APSEC '25, Macao SAR" },
+    { type: "conference", year: 2025, authors: "R. Charatvaraphan, B. Chatchaiyadech, T. Sukijprasert, C. Ragkhitwetsagul, M. Choetkiertikul, R. G. Kula, T. Sunetnanta, K. Matsumoto", title: "PyGress: Tool for Analyzing Progression of Code Proficiency in Python OSS Projects", venue: "ASE '25, Seoul, South Korea" },
+    { type: "conference", year: 2025, authors: "I. Uchoa, D. Sousa, M. Paixão, P. Maia, A. Uchôa, C. Ragkhitwetsagul", title: "An Exploratory Study on the Lifecycle of Code Clones during Code Review", venue: "SBES '25, Brazil" },
+    { type: "conference", year: 2025, authors: "P. Meakpaiboonwattana, W. Tarntong, T. Mekratanavorakul, C. Ragkhitwetsagul, P. Sangaroonsilp, R. G. Kula, M. Choetkiertikul, K. Matsumoto, T. Sunetnanta", title: "Social Media Reactions to Open Source Promotions: AI-Powered GitHub Projects on Hacker News", venue: "ICSME '25 — Research Track, Auckland, New Zealand" },
+    { type: "conference", year: 2025, authors: "T. Racharak, C. Ragkhitwetsagul, C. Sontesadisai, T. Sunetnanta", title: "Test It Before You Trust It: Applying Software Testing for Trustworthy In-context Learning", venue: "NLDB 2025, Kanazawa, Japan" },
+    { type: "conference", year: 2025, authors: "S. Kancharoendee, T. Phichitphanphong, C. Jongyingyos, B. Reid, R. G. Kula, M. Choetkiertikul, C. Ragkhitwetsagul, T. Sunetnanta", title: "On Categorizing Open Source Software Security Vulnerability Reporting Mechanisms on GitHub", venue: "SANER 2025, Montreal, Canada" },
+    { type: "conference", year: 2024, authors: "D. M. Kazimoto, M. Choetkiertikul, C. Ragkhitwetsagul, T. Sunetnanta", title: "DEV-EYE: A Tool for Monitoring Bus Factor Using Commit History", venue: "APSEC 2024 — ERA Track, Chongqing, China" },
+    { type: "conference", year: 2024, authors: "C. Sriwilailak, Y. Higo, P. Lapvikai, C. Ragkhitwetsagul, M. Choetkiertikul", title: "Autorepairability of ChatGPT and Gemini: A Comparative Study", venue: "APSEC 2024 — ERA Track, Chongqing, China" },
+    { type: "conference", year: 2024, authors: "C. Ragkhitwetsagul, K. Kongwongsupak, T. Maneesawas, N. Puttiwarodom, R. Rojpaisarnkit, M. Choetkiertikul, R. G. Kula, T. Sunetnanta", title: "jscefr: A Framework to Evaluate the Code Proficiency for JavaScript", venue: "ICSME '24 — Tool Demo Track, Flagstaff, AZ, USA" },
+    { type: "conference", year: 2024, authors: "D. Sousa, M. Paixao, C. Ragkhitwetsagul, I. Uchoa", title: "Code Clone Configuration as a Multi-Objective Search Problem", venue: "ESEM '24 — Emerging Results, Vision and Reflection Papers Track, Barcelona, Spain" },
+    { type: "conference", year: 2024, authors: "R. Rojpaisarnkit, G. Robles, R. G. Kula, D. Wang, C. Ragkhitwetsagul, J. M. Gonzalez-Barahona, K. Matsumoto", title: "Towards Identifying Code Proficiency through the Analysis of Python Textbooks", venue: "ICSME '24, Flagstaff, AZ, USA" },
+    { type: "conference", year: 2024, authors: "C. Ragkhitwetsagul, V. Prasertpol, N. Ritta, P. Sae-Wong, T. Noraset, M. Choetkiertikul", title: "Typhon: Automatic Recommendation of Relevant Code Cells in Jupyter Notebooks", venue: "JCSSE '24, Phuket, Thailand" },
+    { type: "conference", year: 2024, authors: "C. Ragkhitwetsagul, V. Jarukitpipat, R. G. Kula, M. Choetkiertikul, K. Chhun, W. Wanprasert, T. Sunetnanta", title: "See to Believe: Using Visualization To Motivate Updating Third-party Dependencies", venue: "JCSSE '24, Phuket, Thailand" },
+    { type: "conference", year: 2024, authors: "T. Sanamontre, V. Visoottiviseth, C. Ragkhitwetsagul", title: "Detecting Malicious Android Game Applications on Third-Party Stores Using Machine Learning", venue: "AINA 2024, LNDECT 202, Kitakyushu, Japan" },
+    { type: "conference", year: 2024, authors: "P. Lapvikai, C. Ragkhitwetsagul, M. Choetkiertikul, Y. Higo", title: "Autorepairability: A New Software Quality Characteristic", venue: "SANER 2024, Rovaniemi, Finland" },
+    { type: "conference", year: 2023, authors: "M. Choetkiertikul, A. Hoonlor, C. Ragkhitwetsagul, S. Pongpaichet, T. Sunetnanta, T. Settewong, V. Jiravatvanich, U. Kaewpichai", title: "Mining the Characteristics of Jupyter Notebooks in Data Science Projects", venue: "MSR '23 — Registered Report, Melbourne, Australia" },
+    { type: "conference", year: 2023, authors: "P. Rattanukul, C. Makaranond, P. Watanakulcharus, C. Ragkhitwetsagul, T. Nearunchorn, V. Visoottiviseth, M. Choetkiertikul, T. Sunetnanta", title: "Microusity: A testing tool for Backends for Frontends (BFF) Microservice Systems", venue: "ICPC '23, Melbourne, Australia" },
+    { type: "conference", year: 2022, authors: "N. Ritta, T. Settewong, R. G. Kula, C. Ragkhitwetsagul, T. Sunetnanta, K. Matsumoto", title: "Reusing My Own Code: Preliminary Results for Competitive Coding in Jupyter Notebooks", venue: "APSEC 2022, Virtual Event" },
+    { type: "conference", year: 2022, authors: "T. Settewong, N. Ritta, R. G. Kula, C. Ragkhitwetsagul, T. Sunetnanta, K. Matsumoto", title: "Why Visualize Data When Coding? Preliminary Categories for Coding in Jupyter Notebooks", venue: "APSEC 2022, Virtual Event" },
+    { type: "conference", year: 2022, authors: "C. Ragkhitwetsagul, M. Choetkiertikul, A. Hoonlor, M. Prachyabrued", title: "Virtual Reality for Software Engineering Presentations", venue: "APSEC 2022, Virtual Event (best paper award)" },
+    { type: "conference", year: 2022, authors: "V. Jarukitpipat, K. Chhun, W. Wanprasert, M. Choetkiertikul, T. Sunetnanta, R. G. Kula, B. Chinthanet, T. Ishio, K. Matsumoto", title: "V-Achilles: An Interactive Visualization of Transitive Security Vulnerabilities", venue: "ASE '22 — Tool Demonstration Track, Michigan, USA" },
+    { type: "conference", year: 2022, authors: "C. Ragkhitwetsagul, M. Paixao", title: "Recommending Code Improvements Based on Stack Overflow Answer Edits", venue: "MSR '22 — Registered Report, Pittsburgh, PA, USA (Virtual)" },
+    { type: "conference", year: 2022, authors: "C. Ragkhitwetsagul, J. Krinke, M. Choetkiertikul, T. Sunetnanta, F. Sarro", title: "Identifying Software Engineering Challenges in Software SMEs: A Case Study in Thailand", venue: "SANER '22 — Industry Track, Honolulu, Hawaii (Virtual)" },
+    { type: "conference", year: 2021, authors: "S. Phaithoon, S. Wongnil, P. Pussawong, M. Choetkiertikul, C. Ragkhitwetsagul, T. Sunetnanta, R. Maipradit, H. Hata, K. Matsumoto", title: "FixMe: A GitHub Bot for Detecting and Monitoring On-hold Self-Admitted Technical Debt", venue: "ASE 2021 — Tool Demonstrations (Virtual)" },
+    { type: "conference", year: 2021, authors: "R. White, J. Krinke, E. Barr, F. Sarro, C. Ragkhitwetsagul", title: "Artefact Relation Graphs for Unit Test Reuse Recommendation", venue: "ICST 2021 (Virtual)" },
+    { type: "conference", year: 2020, authors: "D. Han, C. Ragkhitwetsagul, J. Krinke, M. Paixao, G. Rosa", title: "Does code review really remove coding convention violations?", venue: "SCAM 2020, Adelaide, Australia" },
+    { type: "conference", year: 2020, authors: "C. Khanan, W. Luewichana, K. Pruktharathikoon, J. Jiarpakdee, C. Tantithamthavorn, M. Choetkiertikul, C. Ragkhitwetsagul, T. Sunetnanta", title: "JITBot: An Explainable Just-In-Time Defect Prediction Bot", venue: "ASE '20 — Tool Demo Track, Virtual Event, Australia" },
+    { type: "conference", year: 2020, authors: "P. Phan-udom, N. Wattanakul, T. Sakulniwat, C. Ragkhitwetsagul, T. Sunetnanta, M. Choetkiertikul, R. G. Kula", title: "Teddy: Automatic Recommendation of Pythonic Idiom Usage For Pull-Based Software Project", venue: "ICSME 2020, Adelaide, Australia" },
+    { type: "conference", year: 2018, authors: "J. Wilkie, Z. Al Halabi, A. Karaoglu, J. Liao, G. Ndungu, C. Ragkhitwetsagul, M. Paixao, J. Krinke", title: "Who's this? Developer identification using IDE event data", venue: "MSR 2018 — Mining Challenge, Gothenburg, Sweden" },
+    { type: "conference", year: 2017, authors: "M. Paixao, J. Krinke, D. Han, C. Ragkhitwetsagul, M. Harman", title: "Are Developers Aware of the Architectural Impact of Their Changes?", venue: "ASE 2017, Illinois, USA" },
+    { type: "conference", year: 2016, authors: "C. Ragkhitwetsagul, M. Paixao, M. Adham, S. Busari, J. Krinke, J. H. Drake", title: "Searching for Configurations in Clone Evaluation: A Replication Study", venue: "SSBSE 2016 — Challenge Track, Raleigh, NC, USA" },
+    { type: "conference", year: 2016, authors: "C. Ragkhitwetsagul, J. Krinke, D. Clark", title: "Similarity of Source Code in the Presence of Pervasive Modifications", venue: "SCAM 2016, Raleigh, NC, USA" },
+    { type: "conference", year: 2016, authors: "C. Ragkhitwetsagul", title: "Measuring Code Similarity in Large-scaled Code Corpora", venue: "ICSME 2016 — Doctoral Symposium, Raleigh, NC, USA" },
 
-    { type: "workshop", year: 2024, authors: "J. GradStudent, K. Undergrad, A. Researcher", title: "Challenges in Bias-Correcting CMIP6 Projections for Regional Impact Studies", venue: "CORDEX Workshop 2024, Example City, Country" },
-    { type: "workshop", year: 2022, authors: "B. Collaborator, A. Researcher", title: "Reanalysis Data Considered Harmful as Ground Truth for Deep Learning Climate Models", venue: "Climate Informatics Workshop '22, Virtual Event (best paper and best presentation awards)" },
-    { type: "workshop", year: 2019, authors: "A. Researcher, B. Collaborator", title: "A Picture is Worth a Thousand Words: Remote Sensing Imagery for Glacier Retreat Detection", venue: "Cryosphere Workshop 2019, Example City, Country" },
-    { type: "workshop", year: 2018, authors: "A. Researcher, B. Collaborator", title: "Using Ensemble Methods to Constrain Equilibrium Climate Sensitivity", venue: "WCRP Workshop 2018, Example City, Country" },
-    { type: "workshop", year: 2017, authors: "C. Scholar, G. Partner, A. Researcher, H. Advisor, I. Researcher", title: "Interdisciplinary Research Team Configurations in Climate Science: A Study of Collaboration Effectiveness", venue: "International Workshop on Earth System Science 2017, Example City, Country" }
+    { type: "workshop", year: 2024, authors: "R. Deeprom, S. Yang, Y. Higo, M. Choetkiertikul, C. Ragkhitwetsagul", title: "Challenges in Adopting LLaMA: An Empirical Study of Discussions on Stack Overflow", venue: "QuASoQ 2024, Chongqing, China" },
+    { type: "workshop", year: 2022, authors: "J. Krinke, C. Ragkhitwetsagul", title: "BigCloneBench Considered Harmful for Machine Learning", venue: "IWSC '22, Limassol, Cyprus (best paper and best presentation awards)" },
+    { type: "workshop", year: 2019, authors: "N. Assavakamhaenghan, M. Choetkiertikul, S. Tuarob, R. G. Kula, H. Hata, C. Ragkhitwetsagul, T. Sunetnanta, K. Matsumoto", title: "Software Team Member Configurations: A Study of Team Effectiveness in Moodle", venue: "IWESEP 2019, Tokyo, Japan" },
+    { type: "workshop", year: 2019, authors: "T. Sakulniwat, R. G. Kula, C. Ragkhitwetsagul, M. Choetkiertikul, T. Sunetnanta, D. Wang, T. Ishio, K. Matsumoto", title: "Visualizing the Usage of Pythonic Idioms Over Time: A Case Study of the with open Idiom", venue: "IWESEP 2019, Tokyo, Japan" },
+    { type: "workshop", year: 2019, authors: "V. Arammongkolvichai, R. Koschke, C. Ragkhitwetsagul, M. Choetkiertikul, T. Sunetnanta", title: "Improving Clone Detection Precision using Machine Learning Techniques", venue: "IWESEP 2019, Tokyo, Japan" },
+    { type: "workshop", year: 2018, authors: "C. Ragkhitwetsagul, J. Krinke", title: "A picture is worth a thousand words: code clone detection based on image similarity", venue: "IWSC 2018, Campobasso, Italy" },
+    { type: "workshop", year: 2017, authors: "C. Ragkhitwetsagul, J. Krinke", title: "Using Compilation/Decompilation to Enhance Clone Detection", venue: "IWSC 2017, Klagenfurt, Austria" }
   ],
   supervision: {
     phd: [
-      { years: "2022–Present", entries: ["Ada Phdstudent — Machine Learning Approaches for Improving Regional Climate Projections (University PhD Scholarship 2022)"] }
+      { years: "2022–2024", entries: ["In-on Wiratsin — Improving Software Quality Using Crowdsourcing Knowledge and Artificial Intelligence (Mahidol PhD scholarship 2022)"] }
     ],
     masters: [
-      { years: "2024", entries: ["Bob Masterstudent — Multi-Model Assessment of Monsoon Variability Under Global Warming Scenarios (co-supervised with Dr. C. Scholar)"] },
+      { years: "2025", entries: ["Lapatrada Dangsungnoen — M-MMT4NL: Multilingual Testing Framework for Large-Language Models (co-supervised with Assoc. Prof. Dr. Teeradaj Racharak)"] },
       { years: "2023", entries: [
-        "Carol Gradstudent — Deep Learning for Downscaling CMIP6 Precipitation Projections (co-supervised with Dr. D. Academic)",
-        "Dave Masterstudent — Detecting Methane Emission Hotspots Using Satellite Observations (co-supervised with Dr. E. Postdoc)"
+        "Chayanee Junplong — LLMs for Human-interpretable Explanation in Code Clone Detection (co-supervised with Junior Assoc. Prof. Dr. Teeradaj Racharak)",
+        "Thanaporn Sanamontre — Detecting Altered Malicious Android Game Applications on Third-party Repositories (co-supervised with Assoc. Prof. Dr. Vasaka Visoottiviseth)"
       ]}
     ],
     undergrad: [
+      { years: "2025", entries: [
+        "Panya Trakoolgerntong, Arus Thienmee, Patsathorn Chadbanterng — GitHub Pull Request Link Summarizer",
+        "Thanakorn Inthongsuk, Chaosap Pongthawichai, Pantaree Balee — Automated Software Requirement Quality Assessment and Recommendations"
+      ]},
       { years: "2024", entries: [
-        "Eve Undergrad, Frank Senior, Grace Junior — Interactive Dashboard for Local Climate Risk Communication",
-        "Henry Sophomore, Ivy Freshman, Jack Senior — Automated Assessment of Urban Green Space as a Heat Mitigation Strategy"
+        "Warittha Tarntong, Prachnachai Meakpaiboonwattana, Thai Mekratanavorakul — Social Media Reactions to Open Source Promotions",
+        "Napat Boongaree, Pachanitha Saeheng, Chutweraya Sriwilailak — NPC: Detecting and Explaining LLM-generated Source Code",
+        "Chalisa Sae-ngow, Jirateep Rudeerudchanawong, Chommakorn Sontesadisai — PromptOps: Automated Tool for Testing LLMs"
       ]},
       { years: "2023", entries: [
-        "Kate Undergrad, Leo Senior, Mia Junior — Social Media Discourse Analysis on Climate Change Denial",
-        "Nina Sophomore, Oscar Senior, Paula Junior — Detecting and Attributing Extreme Precipitation Events",
-        "Quinn Undergrad, Ray Student, Sara Student — Automated Tool for Evaluating National Climate Pledges (NDCs)"
+        "Rujiphart Charatvaraphan, Bunradar Chatchaiyadech, Thitirat Sukijprasert — Analyzing coding competency of Python contributors in open-source projects"
       ]},
       { years: "2022", entries: [
-        "Tom Senior, Uma Undergrad, Victor Junior — Analyzing Carbon Footprint of University Campuses"
+        "Veerakit Prasertpol, Natanon Ritta, Paphon Sae-wong — Recommending Python coding alternatives in Jupyter notebooks",
+        "Komsan Kongwongsupak, Thanakit Maneesawas, Natpichsinee Puttiwarodom — Defining and evaluating JavaScript code competency",
+        "Tasha Settewong, Natanon Ritta — NAIST summer internship"
       ]},
       { years: "2021", entries: [
-        "Wendy Student, Xavier Junior, Yara Senior — Recommending Energy-Efficient Alternatives Using Climate Data",
-        "Zara Student, Aaron Junior, Beth Senior — Defining and Evaluating Indicators for Climate Resilience"
+        "Chansida Makaranond, Pattarakrit Rattanukul, Pumipat Watanakulcharus — Microusity: Security Testing Tool for BFF Microservice Architecture"
+      ]},
+      { years: "2020", entries: [
+        "Tasha Settewong, Natanon Ritta — NAIST summer internship",
+        "Phattharapong Poolthong, Panaya Sirilertworakul, Kanika Wonwien — JARVAN: Automatic checker for outdated StackOverflow answers",
+        "Vipawan Jarukitpipat, Wachirayana Wanprasert, Klinton Chhun — Achilles: Analysis of effects from software dependency vulnerabilities"
+      ]},
+      { years: "2019", entries: [
+        "Vara Arammongkolvichai, Weekit Ausavaserenont, Wannaporn Vichaisri — Merry: Web-based Code Clone Detection System",
+        "Purit Phan-udom, Naruedon Wattakul, Tattiya Sakulniwat — TEDDY: Automated tool for Pythonic idiom usage",
+        "Thanachanok Siripittakul, Peerachai Banyongrakkul, Thayut Indramaha — Sprint2Vec (co-supervisor)",
+        "Krissakorn Pruktharathikoon, Natcha Sirikunanon, Rapipat Udomgun — Bug Hunter v.2 (co-supervisor)"
       ]}
     ]
   },
   teaching: [
-    { code: "ES101", title: "Introduction to Climate Science", years: "2019–2024" },
-    { code: "ES201", title: "Atmospheric Dynamics and Thermodynamics", years: "2019–2024" },
-    { code: "ES301", title: "Global Warming: Science, Impacts, and Policy", years: "2019–2024" },
-    { code: "ES401", title: "Advanced Topics in Climate Modeling", years: "2020–2024" },
-    { code: "ES450", title: "Climate Change Adaptation and Mitigation", years: "2022–2024" },
-    { code: "ES220", title: "Fundamentals of Earth System Science", years: "2021–2023" },
-    { code: "ES110", title: "Environmental Science for Non-Majors", years: "2019–2020" }
+    { code: "ITCS371", title: "Introduction to Software Engineering (EN)", years: "2019–2023" },
+    { code: "ITDS261", title: "Introduction to Software Engineering (TH)", years: "2022–2024" },
+    { code: "ITDS262", title: "Software Engineering Lab (TH)", years: "2022–2024" },
+    { code: "ITCS431", title: "Software Design and Development (EN)", years: "2019–2024" },
+    { code: "ITDS361", title: "Software Design and Development (TH)", years: "2023–2024" },
+    { code: "ITCS473", title: "Software Quality Assurance and Testing (EN)", years: "2019–2024" },
+    { code: "ITDS362", title: "Software Quality Assurance and Testing (TH)", years: "2023–2024" },
+    { code: "ITCS224", title: "Fundamentals of IS and SW Development (EN)", years: "2024" },
+    { code: "ITCY553", title: "Secure Software Design (EN)", years: "2022" },
+    { code: "ITCS335", title: "Introduction to e-Business Systems (EN)", years: "2020–2023" },
+    { code: "ITCS126", title: "Introduction to Entrepreneurship (EN)", years: "2024" },
+    { code: "ITDS101", title: "Industry Experiences and Problems I (TH)", years: "2022–2024" },
+    { code: "ITDS201", title: "Industry Experiences and Problems II (TH)", years: "2022" },
+    { code: "ITCS155", title: "Computer Applications (TH)", years: "2019–2020" }
   ],
   curriculum: [
-    "Bachelor of Science in Climate Science, Department of Earth and Environmental Sciences, Example University"
+    "Bachelor of Science in Digital Science and Technology (DST), Faculty of Information and Communication Technology, Mahidol University"
   ],
   services: {
-    consulting: ["Climate Science Advisor (2019–Present): technical advisory to regional government on IPCC AR6 implementation and national adaptation planning"],
+    consulting: ["Software Engineering Consultant (2019–Present): adoption of ISO/IEC 29110-4-1:2018 — Lifecycle profiles for Very Small Entities (VSEs)"],
     committees: [
       "University Research Ethics Committee, Example University (2021–Present)",
       "Faculty Curriculum Committee, Department of Earth and Environmental Sciences (2020–Present)",
       "National Climate Research Advisory Panel, Ministry of Science (2022–Present)"
     ],
     courses: [
-      { title: "Global Warming: The Science and the Solutions", host: "Online Learning Platform", url: "https://example.com/courses/global-warming" },
-      { title: "Introduction to Climate Change for Non-Scientists", host: "University Open Courseware", url: "https://example.com/open/climate-intro" }
+      { title: "Software Quality Assurance and Testing: Introduction to Testing Principles and Structured Testing Techniques", host: "MUx", url: "https://mux.mahidol.ac.th/courses/course-v1:MU-ICT+ITCS473+MU-ICT_000004" },
+      { title: "Applications for Increasing Working Efficiency", host: "Mahidol Channel Academy", url: "https://channel.mahidol.ac.th/mca/course/12/applications-for-increasing-efficiently-working" },
+      { title: "Microsoft Office Techniques", host: "Mahidol Channel Academy", url: "https://channel.mahidol.ac.th/mca/course/5/Microsoft_Office" }
     ],
     journals: [
-      "Nature Climate Change",
-      "Journal of Climate (American Meteorological Society)",
-      "Global Change Biology",
-      "Environmental Research Letters",
-      "Climate Dynamics",
-      "Geophysical Research Letters",
-      "Nature Geoscience",
-      "Climatic Change",
-      "Geoscientific Model Development"
+      "Transactions on Software Engineering (TSE)",
+      "Empirical Software Engineering (EMSE)",
+      "ACM Transactions on Software Engineering and Methodology (TOSEM)",
+      "Journal of Systems and Software (JSS)",
+      "Software: Practice and Experience (SPE)",
+      "Journal of Software: Evolution and Process (JSEP)",
+      "IEEE Access",
+      "Science of Computer Programming (SCP)",
+      "Software Quality Journal (SQJ)"
     ],
     organizing: [
-      { year: 2024, items: ["Short Papers and Posters Track Co-Chair, EGU General Assembly 2025"] },
-      { year: 2022, items: ["Diversity, Inclusion and Outreach Co-Chair, AGU Fall Meeting 2022"] },
-      { year: 2021, items: ["Program co-chair, Early Career Track of AMS Annual Meeting 2021", "Guest Editor (with A. Collaborator), Climatic Change Special Issue on Tipping Points"] },
-      { year: 2020, items: ["Judge, Student Presentation Competition, AGU Fall Meeting 2020", "Program co-chair, Climate Informatics Workshop 2020"] }
+      { year: 2024, items: ["Short Papers and Posters Track Co-Chair, SANER 2025"] },
+      { year: 2022, items: ["Diversity, Inclusion and Outreach Co-Chair, MSR 2022"] },
+      { year: 2021, items: ["Program co-chair, ERA Track of ICPC 2021", "Guest Editor (with Hitesh Sajnani), JSS Special Issue on Software Clones"] },
+      { year: 2020, items: ["Judge, ACM Student Research Competition Track of ICSE 2020", "Program co-chair, IWSC 2020"] }
     ],
     pcMembership: [
-      { year: 2025, items: ["EGU '25 (Atmospheric Sciences)", "AMS Annual Meeting '25 (Climate Variability)", "AGU '25 (Global Environmental Change)", "ICCGW '25 (Research)", "CORDEX '25 (Regional Climate)"] },
-      { year: 2024, items: ["EGU 2024 (Climate)", "AGU 2024 (Cryosphere)", "AMS '24 (Climate Change)", "Ocean Sciences '24 (Carbon Cycle)", "Climate Informatics '24 (Research)", "IGARSS '24 (Research)"] },
-      { year: 2023, items: ["CORDEX '23", "AGU 2023 (Atmospheric)", "EGU '23 (Research)", "Climate Informatics '23", "AMS '23 (Registered Reports)"] },
-      { year: 2022, items: ["WCRP '22", "Climate Informatics '22", "AGU '22 (Poster)", "EGU 2022 (Research)", "Ocean Sciences '22 (Research)"] },
-      { year: 2021, items: ["KSE 2021", "CORDEX 2021", "EGU 2021 (Research)", "AGU 2021 (Late Breaking Results)", "AMS 2021 (Posters)"] },
-      { year: 2020, items: ["AGU 2020 (Research Papers)", "Climate Informatics 2020 (Technical Research)"] },
-      { year: 2019, items: ["EGU 2019 (Technical Research)", "AGU 2019 (Technical Research)", "Cryosphere Workshop 2019"] }
+      { year: 2026, items: ["ISSTA '26 (Research)", "ICST '26 (Research)", "SANER '26 (ERA)", "ICPC '26 (Research)", "MSR '26 (Technical)", "ICSE '26 (Research)"] },
+      { year: 2025, items: ["APSEC 2025 (ERA)", "APSEC 2025 (Technical)", "ICSME '25 (Doctoral Symposium)", "FSE '25 (Demonstrations)", "ICPC '25 (Research)", "RAIE '25", "ICST '25 (Research)", "MSR '25 (Technical)", "ICSE '25 (Research)", "ASE '25 (Research)"] },
+      { year: 2024, items: ["ICTSS '24 (Industry)", "ASE '24 (NIER)", "ASE '24 (Tool Demo)", "ICSME '24 (NIER)", "ICSME '24 (Tool Demo)", "ICSME '24 (Doctoral Symposium)", "SSBSE '24 (RENE/NIER)", "FSE '24 (Demonstrations)", "ICPC '24 (Research/Tool Demo)", "ICSE '24 (Journal First)", "CAIN '24", "MSR '24 (Data and Tool Showcase)"] },
+      { year: 2023, items: ["IWSC '23", "ASE 2023 (Tool Demo/NIER)", "ICSME '23 (Research)", "JCSSE '23", "CHASE '23 (Registered Reports)", "CAIN '23", "MSR '23 (Registered Reports)", "MSR '23 (Data and Tool Showcase)", "MSR '23", "ICSE '23 (Posters)", "ICPC '23 (Tool Demo)", "ICPC '23", "SANER '23"] },
+      { year: 2022, items: ["ISEC '23", "SSBSE '22 (RENE/NIER)", "IWSC '22", "ASE '22 (Tool Demo)", "ICSME '22 (Research)", "CAIN '22", "ICPC 2022 (Research)", "MSR 2022 (Registered Reports)", "MSR 2022 (Data and Tool Showcase)", "MSR 2022 (Hackathon)", "SANER 2022 (ERA)", "ISEC 2022 (Research)"] },
+      { year: 2021, items: ["KSE 2021", "IWSC 2021", "SSBSE 2021 (Replications/Negative Results)", "ICSME 2021 (Research)", "ASE 2021 (Late Breaking Results)", "ASE 2021 (Posters)", "ICSE 2021 (Posters)"] },
+      { year: 2020, items: ["ASE 2020 (Late Breaking Results)", "ASE 2020 (Research Papers)", "ICPC 2020 (Technical Research)", "ISEC 2020"] },
+      { year: 2019, items: ["ICSME 2019 (Technical Research)", "ICPC 2019 (Technical Research)", "IWSC 2019"] }
     ],
-    examiner: ["Bob Phdcandidate — Carbon Cycle Feedbacks and Climate Sensitivity, PhD, Example University, 2023"],
+    examiner: ["Brittany Reid — Improving Developer Efficiency through Code Reuse, PhD, University of Adelaide, 2023"],
     mentoring: [
-      "National Youth Science Competition 2024 — Mentor of Team ClimateAI, Example High School (Finalist)",
-      "National Youth Science Competition 2023 — Mentor of Team EcoSense, Example Academy (Winner)"
+      "Samsung Solve for Tomorrow Thailand 2025 — Mentor of Team AI Spine Check, The Prince Royal's College (Finalist)",
+      "Samsung Solve for Tomorrow Thailand 2024 — Mentor of Team Maprao, KVIS (Winner)"
     ]
   },
   talks: [
-    { title: "AI-Assisted Climate Modeling: Opportunities and Pitfalls", host: "Department of Earth Sciences, State University", date: "15 September 2024", location: "Country" },
-    { title: "Tipping Points in the Earth System: What Do We Know?", host: "Climate Research Institute, Tech University", date: "10 June 2023", location: "Country" },
-    { title: "Global Warming Beyond 2°C: Regional Impacts and Policy Responses", host: "Regional Climate Summit", date: "20–22 November 2022", location: "City, Country" },
-    { title: "Arctic Amplification and Its Role in Mid-Latitude Weather Extremes", host: "Atmospheric Science Lab, Example University", date: "5 August 2020", location: "Country" }
+    { title: "Rapid Prototyping with AI-assisted Programming", host: "Department of Mathematics and Computer Science, Faculty of Science, Chulalongkorn University", date: "25 August 2025", location: "Thailand" },
+    { title: "Rapid Prototyping with AI-assisted Programming", host: "Faculty of Science, Khon Kaen University", date: "8 July 2025", location: "Thailand" },
+    { title: "Challenges in Code Similarity: Accuracy and Scalability", host: "ReaLearn lab, JAIST", date: "28 July 2023", location: "Japan" },
+    { title: "Automated Software Engineering for Thailand Software Industry", host: "Dev Mountain Tech Festival Season 2", date: "11–13 November 2022", location: "Chiang Mai, Thailand" },
+    { title: "Code Similarity and Clone Search in Large-scale Source Code Data", host: "Software Engineering lab, Osaka University", date: "20 August 2020", location: "Japan" }
   ]
 };

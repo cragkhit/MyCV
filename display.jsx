@@ -105,29 +105,39 @@ function Display({ cv, onChange, onList, mode, query }) {
 
       {!hidden.has("honors") && (
       <Section num="04" title={sectionTitle("honors", "Selected Honors")} id="honors" onRemove={rm("honors")} onTitleChange={titleChange("honors")}>
-        <ul className="bullet-list">
-          {cv.honors.filter(matches).map((h, i) => (
-            <li key={i} className="has-actions">
-              <Editable value={h} onChange={(v) => onList("honors", "set", { i, v })} multiline />
+        <div className="honors-table">
+          {cv.honors.filter(h => matches(h.year) || matches(h.honor)).map((h, i) => (
+            <div key={i} className="honors-row has-actions">
+              <div className="honors-year">
+                <Editable value={h.year} onChange={(v) => onList("honors", "set", { i, v: { ...h, year: v } })} />
+              </div>
+              <div className="honors-honor">
+                <Editable value={h.honor} onChange={(v) => onList("honors", "set", { i, v: { ...h, honor: v } })} multiline />
+              </div>
               {editing && <RowActions onRemove={() => onList("honors", "remove", { i })} {...move("honors", i, cv.honors.length)} />}
-            </li>
+            </div>
           ))}
-        </ul>
-        {editing && <AddRowButton onClick={() => onList("honors", "add", "New honor or award")} label="honor" />}
+        </div>
+        {editing && <AddRowButton onClick={() => onList("honors", "add", { year: String(new Date().getFullYear()), honor: "New honor or award" })} label="honor" />}
       </Section>
       )}
 
       {!hidden.has("grants") && (
       <Section num="05" title={sectionTitle("grants", "Funded Research Grants")} id="grants" onRemove={rm("grants")} onTitleChange={titleChange("grants")}>
-        <ul className="bullet-list">
-          {cv.grants.filter(matches).map((g, i) => (
-            <li key={i} className="has-actions">
-              <Editable value={g} onChange={(v) => onList("grants", "set", { i, v })} multiline />
+        <div className="honors-table">
+          {cv.grants.filter(g => matches(g.year) || matches(g.grant)).map((g, i) => (
+            <div key={i} className="honors-row has-actions">
+              <div className="honors-year">
+                <Editable value={g.year} onChange={(v) => onList("grants", "set", { i, v: { ...g, year: v } })} />
+              </div>
+              <div className="honors-honor">
+                <Editable value={g.grant} onChange={(v) => onList("grants", "set", { i, v: { ...g, grant: v } })} multiline />
+              </div>
               {editing && <RowActions onRemove={() => onList("grants", "remove", { i })} {...move("grants", i, cv.grants.length)} />}
-            </li>
+            </div>
           ))}
-        </ul>
-        {editing && <AddRowButton onClick={() => onList("grants", "add", "New grant")} label="grant" />}
+        </div>
+        {editing && <AddRowButton onClick={() => onList("grants", "add", { year: String(new Date().getFullYear()), grant: "New grant" })} label="grant" />}
       </Section>
       )}
 
@@ -362,6 +372,12 @@ function Section({ num, title, id, children, meta, onRemove, onTitleChange }) {
 function PublicationsSection({ cv, onChange, onList, editing, matches, move, onRemove, title, onTitleChange }) {
   const setStat1 = (key, val) => onChange("pubStats", { ...cv.pubStats, citations:  { ...cv.pubStats.citations,  [key]: val } });
   const setStat2 = (key, val) => onChange("pubStats", { ...cv.pubStats, citations2: { ...cv.pubStats.citations2, [key]: val } });
+  const pubCounts = useMemo(() => {
+    const c = { journal: 0, conference: 0, workshop: 0, chapter: 0 };
+    cv.publications.forEach(p => { if (c[p.type] !== undefined) c[p.type]++; });
+    return c;
+  }, [cv.publications]);
+
   const [typeFilter, setTypeFilter] = useState("all");
   const [yearFilter, setYearFilter] = useState("all");
 
@@ -394,10 +410,10 @@ function PublicationsSection({ cv, onChange, onList, editing, matches, move, onR
   return (
     <Section num="06" title={title} id="publications" meta={`${cv.publications.length} total`} onRemove={onRemove} onTitleChange={onTitleChange}>
       <div className="pub-stats">
-        <div className="pub-stat"><div className="n">{cv.pubStats.journals}</div><div className="l">Journals</div></div>
-        <div className="pub-stat"><div className="n">{cv.pubStats.conferences}</div><div className="l">Conferences</div></div>
-        <div className="pub-stat"><div className="n">{cv.pubStats.workshops}</div><div className="l">Workshops</div></div>
-        <div className="pub-stat"><div className="n">{cv.pubStats.chapters}</div><div className="l">Chapters</div></div>
+        <div className="pub-stat"><div className="n">{pubCounts.journal}</div><div className="l">Journals</div></div>
+        <div className="pub-stat"><div className="n">{pubCounts.conference}</div><div className="l">Conferences</div></div>
+        <div className="pub-stat"><div className="n">{pubCounts.workshop}</div><div className="l">Workshops</div></div>
+        <div className="pub-stat"><div className="n">{pubCounts.chapter}</div><div className="l">Chapters</div></div>
         <div className="pub-stat">
           <div className="n"><Editable value={String(cv.pubStats.citations.count)} onChange={(v) => setStat1("count", parseInt(v) || v)} /></div>
           <div className="l"><Editable value={cv.pubStats.citations.source} onChange={(v) => setStat1("source", v)} /></div>
@@ -605,7 +621,7 @@ function ServicesSection({ cv, onList, onChange, editing, onRemove, title, onTit
             <div className="yr"><Editable value={String(row.year)} onChange={(v) => { const n = [...s.organizing]; n[i] = { ...n[i], year: v }; setS({ ...s, organizing: n }); }} /></div>
             <div style={{fontSize: 14, color: "var(--ink-soft)"}}>
               {row.items.map((it, j) => (
-                <div key={j} style={{position: "relative"}}>— <Editable value={it} onChange={(v) => { const n = [...s.organizing]; n[i] = { ...n[i], items: n[i].items.map((x, k) => k === j ? v : x) }; setS({ ...s, organizing: n }); }} multiline />
+                <div key={j} style={{position: "relative"}}><Editable value={it} onChange={(v) => { const n = [...s.organizing]; n[i] = { ...n[i], items: n[i].items.map((x, k) => k === j ? v : x) }; setS({ ...s, organizing: n }); }} multiline />
                   {editing && <button className="ec-btn danger" style={{marginLeft: 6, width: 16, height: 16, fontSize: 10}} onClick={() => { const n = [...s.organizing]; n[i] = { ...n[i], items: n[i].items.filter((_, k) => k !== j) }; setS({ ...s, organizing: n }); }}>×</button>}
                 </div>
               ))}
